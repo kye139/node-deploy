@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .update.half
+    form#update-form(action="/user/update" method="post")
+        table#update-tb
+            thead
+                legend 프로필 수정
+            tbody
+                tr
+                    td Email:
+                    td
+                        input(type="text" name="email" value= user.email)
+                tr
+                    td Nickname:
+                    td
+                        input(type="text" name="nick" value= user.nick)
+                tr
+                    td
+                        input.btn(type="submit" value="제출")
